@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hayat Alghamdi - Student Portfolio</title>
+    <meta name="description" content="Personal portfolio of Hayat Alghamdi, a student of Computer Science at King Fahd University of Petroleum and Minerals.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Section -->
+    <nav class="navbar" id="navbar">
+        <!-- Navigation container to center and constrain width -->
+        <div class="nav-container">
+            <!-- Logo/Brand section -->
+            <div class="nav-logo">
+                <a href="#home" aria-label="Home">HAG</a>
+            </div>
+
+            <!-- Desktop Navigation Menu -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+                <span class="nav-toggle-line"></span>
+            </button>
+        </div>
+    </nav>
+
+     <!-- Personalized Greeting Bar -->
+    <div class="greeting-bar" id="greeting-bar">
+        <div class="greeting-container">
+            <!-- Input form for new users -->
+            <div class="greeting-form" id="greeting-form">
+                <div class="greeting-form-content">
+                    <label for="user-name" class="greeting-label">Enter your name:</label>
+                    <div class="greeting-input-group">
+                        <input type="text" id="user-name" class="greeting-input" placeholder="Your name" maxlength="50">
+                        <div class="greeting-buttons">
+                            <button type="button" id="save-name" class="greeting-btn save-btn">Save</button>
+                            <button type="button" id="clear-name" class="greeting-btn clear-btn">Clear</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Personalized greeting for returning users -->
+            <div class="greeting-message" id="greeting-message-display" style="display: none;">
+                <div class="greeting-text">
+                    <span class="greeting-welcome"><span id="greeting-prefix">Welcome</span>, <span id="displayed-name"></span>! Learn more about me on LinkedIn</span>
+                    <a href="https://www.linkedin.com/in/hayatag" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                        💼
+                    </a>
+                    <!-- Weather Display -->
+                    <div class="weather-display" id="weather-display">
+                        <div class="weather-loading" id="weather-loading">Loading weather...</div>
+                        <div class="weather-content" id="weather-content" style="display: none;">
+                            <span class="weather-icon">🌤️</span>
+                            <span class="weather-info">
+                                <span class="weather-temp" id="weather-temp"></span>
+                                <span class="weather-desc" id="weather-desc"></span>
+                            </span>
+                        </div>
+                        <div class="weather-error" id="weather-error" style="display: none;">
+                            <span class="weather-error-text">Unable to load weather</span>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="edit-name" class="greeting-btn edit-btn">Edit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section - Main landing area with name and profile image -->
+    <section id="home" class="hero">
+        <!-- Container to center and constrain hero content width -->
+        <div class="hero-container">
+            <!-- Main content wrapper for hero section -->
+            <div class="hero-content">
+                <!-- Text content section with name, title and scroll indicator -->
+                <div class="hero-text">
+                    <h1 class="hero-name">Hayat Alghamdi</h1>
+                    <!-- Professional title/description -->
+                    <div class="hero-title">
+                        <h2>Computer Science Student</h2>
+                    </div>
+                    <!-- Scroll indicator to guide users to projects section -->
+                    <div>
+                        <a href="#projects" class="scroll-indicator" aria-label="Scroll to recent works">
+                            <span>↓ Recent Projects</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Profile image section -->
+                <div class="hero-image">
+                    <img src="assets/images/woman.png" alt="Profile Picture" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section - Personal introduction and background -->
+    <section id="about" class="about">
+        <!-- Main container for section content -->
+        <div class="container">
+            <!-- Section header with title and decorative underline -->
+            <div class="section-header">
+                <h2 class="section-title">About me</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <!-- About content containing personal description -->
+            <div class="about-content">
+                <p>I am a Computer Science undergraduate at King Fahd University of Petroleum and Minerals with interests in Artificial Intelligence, Web Development, and Data Science. I am motivated by problem-solving, collaboration, and continuous learning, and I strive to refine my skills while adapting to new challenges. With a solid foundation in programming and analytical thinking, I aim to develop innovative solutions that integrate technology with creativity.</p>
+            </div>
+    </section>
+
+    <!-- Skills Section - Technical skills and tools -->
+    <section id="skills" class="skills">
+        <!-- Main container for section content -->
+        <div class="container">
+            <!-- Section header with title and decorative underline -->
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <!-- Grid container for skill items -->
+            <div class="skills-grid">
+                <!-- Individual skill item with icon and label -->
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/java.svg" alt="Java" class="icon-img">
+                    </div>
+                    <span class="skill-label">Java</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/python.svg" alt="Python" class="icon-img">
+                    </div>
+                    <span class="skill-label">Python</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/c.svg" alt="C" class="icon-img">
+                    </div>
+                    <span class="skill-label">C</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/sql.svg" alt="SQL" class="icon-img">
+                    </div>
+                    <span class="skill-label">SQL</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/javascript.svg" alt="JavaScript" class="icon-img">
+                    </div>
+                    <span class="skill-label">JavaScript</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/html.svg" alt="HTML" class="icon-img">
+                    </div>
+                    <span class="skill-label">HTML</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/css.svg" alt="CSS" class="icon-img">
+                    </div>
+                    <span class="skill-label">CSS</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/reactjs.svg" alt="React" class="icon-img">
+                    </div>
+                    <span class="skill-label">React</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/git.svg" alt="Git" class="icon-img">
+                    </div>
+                    <span class="skill-label">Git</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/github.svg" alt="GitHub" class="icon-img">
+                    </div>
+                    <span class="skill-label">GitHub</span>
+                </div>
+
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/figma.svg" alt="Figma" class="icon-img">
+                    </div>
+                    <span class="skill-label">Figma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section - Portfolio of completed projects -->
+    <section id="projects" class="projects">
+        <!-- Main container for section content -->
+        <div class="container">
+            <!-- Section header with title and decorative underline -->
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <!-- Project Filter Buttons -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+            </div>
+
+            <!-- Grid container for project cards -->
+            <div class="projects-grid">
+                <!-- Individual project card with image and description -->
+                <div class="project-card" data-language="python">
+                    <!-- Project image container -->
+                    <div class="project-image">
+                        <img src="assets/images/AI.jpg" alt="Classifier AI Model" class="project-img">
+                    </div>
+                    <!-- Project content with title and description -->
+                    <div class="project-content">
+                        <h3 class="project-title">Classifier AI Model</h3>
+                        <p class="project-description">Built a machine learning classifier in Python, testing multiple algorithms to improve accuracy and demonstrating curiosity in applied AI.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-language="web-design">
+                    <div class="project-image">
+                        <img src="assets/images/TutorApp.jpg" alt="Tutor Link Platform" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Tutor Link Platform</h3>
+                        <p class="project-description">Collaborated in a team to design and develop a tutoring application, applying software engineering principles, requirement analysis, and UML modeling to strengthen collaboration and communication.</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-language="java">
+                    <div class="project-image">
+                        <img src="assets/images/ManagementSystem.jpg" alt="Student Records Management System" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Student Records Management System</h3>
+                        <p class="project-description">Implemented a multi-index searchable system in Java, integrating advanced algorithms and data structures to improve efficiency in managing student data.</p>
+                    </div>
+                </div>
+                <div class="project-card" data-language="python">
+                    <div class="project-image">
+                        <img src="assets/images/dataanalyticsrole.jpg" alt="Student Records Management System" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Obesity Data Analysis</h3>
+                        <p class="project-description">Performed data cleaning, visualization, and statistical analysis using Python libraries, emphasizing data-driven decision-making and insight generation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Contact form for getting in touch -->
+    <section id="contact" class="contact">
+        <!-- Main container for section content -->
+        <div class="container">
+            <!-- Section header with title and decorative underline -->
+            <div class="section-header">
+                <h2 class="section-title">CONTACT ME</h2>
+                <div class="section-underline"></div>
+            </div>
+
+            <!-- Contact form container -->
+            <div class="contact-content">
+                <!-- Contact form for user inquiries -->
+                <form class="contact-form" id="contact-form" action="https://formspree.io/f/xdkwkdza" method="POST" novalidate>
+                    <!-- Name input field with validation -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required minlength="2" aria-describedby="name-error">
+                        <span class="error-message" id="name-error" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Email input field with validation -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+                        <span class="error-message" id="email-error" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Message textarea with validation -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea id="message" name="message" class="form-input form-textarea" required minlength="5" aria-describedby="message-error"></textarea>
+                        <span class="error-message" id="message-error" aria-live="polite"></span>
+                    </div>
+
+                    <!-- Form submission button -->
+                    <button type="submit" class="submit-btn">Send Message</button>
+
+                    <!-- Status message area for form feedback -->
+                    <div class="form-status" id="form-status" aria-live="polite"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section - Site footer with links and copyright -->
+    <footer class="footer">
+        <!-- Main container for footer content -->
+        <div class="container">
+            <!-- Footer main content area -->
+            <div class="footer-content">
+                <!-- Footer logo/brand -->
+                <div class="footer-logo">
+                    <a href="#home" aria-label="Home">HAG</a>
+                </div>
+                <!-- Footer navigation links -->
+                <div class="footer-links">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+            <!-- Footer bottom section with greeting and copyright -->
+            <div class="footer-bottom">
+                <!-- Welcome message for visitors -->
+                <div class="greeting-message" id="greeting-message">
+                    Good day! Thank you for visiting my portfolio.
+                </div>
+                <!-- Copyright information -->
+                <div class="copyright" id="copyright">
+                    <span>&copy; <span id="current-year"></span> Hayat Alghamdi. All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+</body>
+</html>
