@@ -261,7 +261,6 @@
                 },
                 (error) => {
                     // If user denies location or error occurs, use default city
-                    // Geolocation error, using default city
                     resolve('Dhahran');
                 },
                 { timeout: 5000 } // 5 second timeout
