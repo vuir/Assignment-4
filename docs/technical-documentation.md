@@ -1,10 +1,10 @@
-# Technical Documentation: Portfolio Website (Assignment 3)
+# Technical Documentation: Portfolio Website (Assignment 4)
 
 ## Project Overview
 
 ### Description
-This is the final advanced version of the Computer Science Portfolio Website, created for Assignment 3.  
-It expands upon the work completed in Assignments 1 and 2 by introducing API integration, complex JavaScript logic, advanced state management, and performance optimization.
+This is an advanced version of the Computer Science Portfolio Website, created for Assignment 4.  
+It expands upon the work completed in previous assignments by introducing API integration, complex JavaScript logic, advanced state management, and performance optimization.
 
 The website serves as a dynamic and interactive portfolio, showcasing personal details, skills, featured projects, and a fully validated contact form. It includes responsive layouts, animations, real-time weather information, and persistent user state.
 
@@ -15,12 +15,13 @@ The website serves as a dynamic and interactive portfolio, showcasing personal d
 - **External Tools & APIs**:
   - GoWeather API  
   - Browser Geolocation API  
+  - Reverse Geocoding API (BigDataCloud)  
   - Formspree  
   - Google Fonts  
   - LocalStorage  
 
 ### Purpose
-Assignment 3 required transforming the portfolio into a highly interactive web application, demonstrating:
+Assignment 4 required transforming the portfolio into a highly interactive web application, demonstrating:
 - API integration  
 - Complex and maintainable JavaScript logic  
 - Persistent state management  
@@ -33,7 +34,7 @@ Assignment 3 required transforming the portfolio into a highly interactive web a
 ## Project Structure
 
 ```
-Assignment-3/
+Assignment-4/
 ├── index.html
 ├── css/
 │   └── styles.css
@@ -45,6 +46,9 @@ Assignment-3/
 ├── docs/
 │   ├── ai-usage-report.md
 │   └── technical-documentation.md
+├── presentation/
+│   ├── demo-video.mp4
+│   └── slides.pdf
 └── README.md
 ```
 
@@ -63,11 +67,12 @@ Assignment-3/
   5. Projects with filter buttons  
   6. Contact Form  
 
-- **New Assignment 3 Components:**
+- **Advanced Assignment 4 Components:**
   - Weather display elements  
   - Weather loading/error placeholders  
   - Project filter buttons (`data-language` attributes)  
-  - Greeting prefix element for personalized welcome-back messaging  
+  - Greeting prefix element for personalized welcome-back messaging
+  - Reverse geocoding integration for location-based weather  
 
 ---
 
@@ -99,7 +104,11 @@ Assignment-3/
 
 ### 1. Weather API Integration
 - Attempts to detect user location via `navigator.geolocation`.  
-- Falls back to Dhahran if location access fails.  
+- Uses reverse geocoding (BigDataCloud API) to convert coordinates to city name:
+  ```
+  https://api.bigdatacloud.net/data/reverse-geocode-client?latitude={lat}&longitude={lng}&localityLanguage=en
+  ```
+- Falls back to Dhahran if location access fails or geocoding fails.  
 - Fetches weather data using:
   ```
   https://goweather.herokuapp.com/weather/{city}
@@ -121,7 +130,7 @@ Assignment-3/
 ### 3. Welcome-Back Greeting System
 - Saves the username using:
   ```
-  localStorage.setItem('portfolioUserName', name);
+  localStorage.setItem('portfolio_user_name', name);
   ```
 - Detects returning users and updates the greeting prefix (`Welcome` → `Welcome back`).  
 - Integrated through `showGreetingMessage()` and `initGreetingBar()`.
@@ -193,5 +202,5 @@ Assignment-3/
 
 ## Conclusion
 
-The Assignment 3 portfolio successfully demonstrates advanced web engineering skills by integrating real-time APIs, implementing complex filtering logic, managing persistent user state, and optimizing performance for fast interaction.  
-With well-structured HTML, modular CSS, and organized JavaScript, the website provides a seamless and dynamic user experience.  
+The Assignment 4 portfolio successfully demonstrates advanced web engineering skills by integrating real-time APIs, implementing complex filtering logic, managing persistent user state, and optimizing performance for fast interaction.  
+With well-structured HTML, modular CSS, and organized JavaScript, the website provides a seamless and dynamic user experience. The integration of multiple APIs (geolocation, reverse geocoding, and weather) showcases sophisticated asynchronous programming and error handling techniques.  

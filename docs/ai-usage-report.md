@@ -1,6 +1,6 @@
-# AI Usage Report – Assignment 3  
+# AI Usage Report – Assignment 4  
 
-This document explains exactly **how AI tools (ChatGPT + Cursor)** were used to build and improve the Assignment-3 portfolio, following the rubric categories:
+This document explains exactly **how AI Cursor** were used to build and improve the Assignment-4 portfolio, following the rubric categories:
 
 - Effective Use  
 - Documentation of AI Use  
@@ -10,70 +10,49 @@ This document explains exactly **how AI tools (ChatGPT + Cursor)** were used to 
 ---
 
 # Tools Used
-### ChatGPT (OpenAI)
-Used for:
-- Generating documentation (README, technical docs)
-
 
 ### Cursor AI
 Used for:
-- Designing weather API flow  
-- Creating JS error-handling patterns  
-- Improving filtering logic  
-- Suggesting DOM structure improvements  
-- Improving performance by removing unused code
-
+- Enhancing CSS layout consistency
+- Fixing sizing issues across sections and components
+- Improving spacing, alignment, and typography
+- Cleaning redundant CSS and simplifying styling structure
 ---
 
 # Key AI Contributions
 
-**1. Weather API Integration** 
-- A structured `fetchWeatherData()` function  
-- Loading/error UI patterns  
-- Suggested splitting UI states into 3 functions  
-- Best practice for `async/await` + `try/catch`
+**1. CSS Enhancements and Layout Refinements** 
+- Adjusting inconsistent sizes in the hero, skills, and project sections
+- Unifying padding, margin, and spacing across the entire layout
+- Improving font scaling and readability
+- Enhancing color balance and UI patterns
 
-**2. Project Filtering System** 
-- State flags (`isFiltering`, `currentFilter`)  
-- Class-based filtering with CSS transitions  
-- Staggered animation suggestions
+**2. Code Cleanup and Simplification** 
 
-**3. Welcome Back Message (LocalStorage)**
-- Checking LocalStorage on page load  
-- Passing `isReturningUser` flags  
-- Updating DOM prefixes dynamically
+AI identified:
+- Redundant CSS selectors
+- Areas where utility classes or simpler rules could be used
 
-
-**4.Contact Form Validation**
-- Suggested email regex  
-- Inline validation patterns  
-- Status messages for async operations
 
 ---
 
 ## Benefits and Challenges
 
 ### Benefits
-- Reduced development time due to accurate and structured AI code suggestions.  
-- Improved understanding of asynchronous JavaScript, especially the use of `async/await` and structured error handling.  
-- Strengthened knowledge of DOM-based state management for features such as the welcome-back greeting and project filtering system.  
-- Gained better practices for performance optimization, including removing unused functions, minimizing layout reflows, and loading scripts efficiently with the `defer` attribute.  
-- Enhanced user experience through clearer patterns for loading states, error states, and dynamic UI updates.
+- Enhanced understanding of responsive design adjustments and layout tuning.  
+- More consistent, modern design achieved with less manual experimentation.
+- Increased attention to typography, visual rhythm, and readability.
 
 ### Challenges
-- AI-generated code often needed adaptation to fit the existing structure and style of the project.  
-- Some suggestions were overly complex and required simplification to maintain readability and consistency.  
-- Ensuring consistent behavior of animations, transitions, and filtering across different browsers required additional testing and debugging.  
-- Geolocation-based weather functionality required refinement to ensure a proper fallback flow and smooth user experience.
+- AI sometimes suggested style changes that were too aggressive or mismatched the original design, requiring selective usage.
+- Cursor occasionally suggested removing rules that were still needed for smaller breakpoints, so careful review was essential.
 
 ---
 
 ## Learning Outcomes
-- Developed practical experience with LocalStorage for saving and restoring persistent user state.  
-- Improved skills in DOM manipulation, UI updates, error handling, and asynchronous programming.  
-- Learned how to design and organize UI behavior into clear loading, success, and error functions.  
-- Gained stronger abilities in responsive design, CSS state classes, and animation flow control.  
-- Learned to evaluate AI-generated suggestions critically, using them as guidance rather than relying on them directly.
+- Gained a deeper understanding of advanced CSS techniques, including layout consistency, section spacing, and typography hierarchy.
+- Learned how to evaluate AI-generated styling critically and balance suggestions with existing design goals.
+- Strengthened skills in organizing CSS for clarity, modularity, and maintainability.
 
 ---
 
@@ -85,6 +64,5 @@ Used for:
 ---
 
 ## Conclusion
-AI tools such as ChatGPT and Cursor AI contributed to improving development efficiency and code quality in Assignment 3.  
-They supported the creation of clearer, more modular JavaScript logic; helped refine error handling; suggested UI flow improvements; and assisted in producing documentation.  
-Through careful editing, testing, and understanding of AI-assisted output, the portfolio evolved into a dynamic, API-powered, and high-performance web application that meets all Assignment 3 requirements, including API integration, complex logic, state management, performance optimization, and comprehensive documentation.
+AI tools such as Cursor AI played a valuable role in polishing the Assignment-4 portfolio.
+While the core functionality was already completed in earlier assignments, AI helped refine the UI, enhance readability, fix sizing inconsistencies, and improve responsiveness.
