@@ -50,7 +50,14 @@ Assignment-4/
 2. Open `index.html` in any modern web browser
 3. All features will work immediately (no build tools required)
 4. Allow location access when prompted to see weather for your city
+---
 
+# Live Demo
+
+https://vuir.github.io/Assignment-4/
+
+
+---
 ## Technologies Used
 
 - **HTML5** – Semantic structure and accessibility
