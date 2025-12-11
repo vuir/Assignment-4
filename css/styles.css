@@ -958,8 +958,11 @@
   .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--spacing-2xl);
-    margin-top: var(--spacing-2xl);
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .projects-grid.filtering {
@@ -1052,7 +1055,7 @@
   
   /* Project content section - text area below the image */
   .project-content {
-    padding: var(--spacing-xl) var(--spacing-xl);
+    padding: var(--spacing-lg) var(--spacing-lg);
     color: var(--text-primary);
     position: relative;
     z-index: 2;
@@ -1092,14 +1095,14 @@
   
   /* Contact content container - centers and constrains form width */
   .contact-content {
-    max-width: 680px;
+    max-width: 550px;
     margin: 0 auto;
   }
   
   /* Contact form styling - glassmorphism card design */
   .contact-form {
     background-color: rgba(255, 255, 255, 0.06);
-    padding: var(--spacing-3xl);
+    padding: var(--spacing-2xl);
     border-radius: var(--border-radius-xl);
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
@@ -1114,7 +1117,7 @@
   
   /* Form group - wrapper for each form field */
   .form-group {
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
   }
   
   /* Form label styling */
@@ -1130,7 +1133,7 @@
   /* Form input styling - base styles for all form inputs */
   .form-input {
     width: 100%;
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
     background-color: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--border-radius);
@@ -1161,7 +1164,7 @@
   
   /* Textarea specific styling - taller minimum height */
   .form-textarea {
-    min-height: 140px;
+    min-height: 100px;
     resize: vertical;
     line-height: 1.6;
   }
@@ -1169,7 +1172,7 @@
   /* Submit button styling with hover effects */
   .submit-btn {
     width: 100%;
-    padding: var(--spacing-lg) var(--spacing-xl);
+    padding: var(--spacing-md) var(--spacing-lg);
     background-color: var(--accent-kindawhite);
     color: var(--primary-dark);
     font-size: var(--font-size-base);
